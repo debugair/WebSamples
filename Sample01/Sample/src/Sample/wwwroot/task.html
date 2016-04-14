@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Aufgabe Sample 01</title>
+    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Sample 01</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Lösung</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="contentTemplate">
+
+            <h4>Teilaufgabe 1</h4>
+            <p>
+                Wir schreiben unsere Client Side Logik so um, dass die Add und Edit Form sowie die Person Tabelle dynamisch generiert werden. Dazu definieren wir in unserem script.js das folgende Objekt.
+            </p>
+            <pre>
+      var baseEntity = {"Id":0, "Familyname":"", "Firstname":""};
+    </pre>
+            <p>
+                Über das Objekt baseEntity bauen wir die Dynamik auf der Client Side im JavaScript auf. Ziel sollte es sein, dass wenn wir dem Objekt einen neue Property hinzufügen sich das ganze UI um diese Property erweitert (inkl. Kommunikation mit dem REST Service).
+            </p>
+            <h4>Teilaufgabe 2</h4>
+            <p>
+                Wir testen die Dynamik aus, indem wir unserem C# Objekt eine Property Middlename anhängen. Unsere baseEntity erweitern wir genauso.
+            </p>
+            <pre>
+      public class Person{
+        public int Id {get;set;}
+        public string Familyname {get;set;}
+        public string Firstname {get;set;}
+        public string Middlename {get;set;}
+      }
+    </pre>
+            <pre>
+      var baseEntity = {"Id":0, "Familyname":"", "Firstname":"", "Middlename":""};
+    </pre>
+
+        </div>
+    </div>
+</body>
+</html>
