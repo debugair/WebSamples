@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sample 01</title>
+</head>
+<body>
+    <div class="container">
+        <div class="contentTemplate">
+
+            <h4>Teilaufgabe 1</h4>
+            <p>
+                Wir schreiben einen REST Service für eine Klasse Person. Diese sieht wie folgt aus:
+            </p>
+            <pre>
+      public class Person{
+        public int Id{get;set;}
+        public string Familyname{get;set;}
+        public string Firstname{get;set;}
+      }
+    </pre>
+            <p>
+                Die REST Implementation umfasst die folgenden Methoden:
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Action</td>
+                        <th>Method</td>
+                        <th>Request</td>
+                        <th>Response</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>api/person</td>
+                        <td>GET</td>
+                        <td></td>
+                        <td>Person[]</td>
+                    </tr>
+                    <tr>
+                        <td>api/person</td>
+                        <td>POST</td>
+                        <td>Person</td>
+                        <td>Person</td>
+                    </tr>
+                    <tr>
+                        <td>api/person</td>
+                        <td>PUT</td>
+                        <td>Person</td>
+                        <td>Person</td>
+                    </tr>
+                    <tr>
+                        <td>api/person</td>
+                        <td>DELETE</td>
+                        <td>Id</td>
+                        <td>Id</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Der REST Service verfügt über eine statische Repository Klasse in welcher in einer statischen Liste die Personen Objekte verwaltet werden. Die Werte werden im JSON Format hin und her geschoben (Response / Request).
+            </p>
+            <p>
+                Eine Hilfestellung bringt der folgende Beitrag:
+                <a href="http://docs.asp.net/en/latest/tutorials/first-web-api.html" target="_blank">Webseite mit Beispiel Implementation</a>
+            </p>
+            <h4>Teilaufgabe 2</h4>
+            <p>
+                Im wwwroot Folder des WebApi Projektes legen wir einen Folder script und einen Folder style an. Darin legen wir die aktuelle Version von jQuery ab (jquery.min.js -> Folder script) sowie die aktuelle Version des Bootstrap CSS (bootstrap.min.css -> Folder style).
+            </p>
+            <p>
+                Nun legen wir zwei leere Files an, ein script.js (-> Folder script) und ein style.css (-> Folder style). im wwwroot Folder legen wir ein index.html File an in dessen head wir bootstrap und style CSS und jquery und script JS einbauen.
+            </p>
+            <p>
+                Nun bauen wir in der Index Seite per JavaScript die folgenden UI Elemente ein:
+                <ul>
+                    <li>Add Person Form (mit Add Button)</li>
+                    <li>Edit Person Form (mit Edit, Delete und Cancel Button)</li>
+                    <li>List Person Table</li>
+                </ul>
+            </p>
+            <p>
+                Das UI muss die folgende Funktionalität bereitstellen:
+                <ul>
+                    <li>Beim Laden der Seite die Add Form anzeigen und die Edit Form verstecken</li>
+                    <li>Beim Laden der Seite die Person Tabelle befüllen/li>
+                    <li>Neue Person hinzufügen</li>
+                    <li>Auf Klick einer Row in der Tabelle die Edit Form einblenden und die Add Form verstecken</li>
+                    <li>Auf Edit Button die Änderungen in der Edit Form speichern (hide Edit / show Add)</li>
+                    <li>Auf Delete Button die Person in der Edit Form löschen (hide Edit / show Add)</li>
+                    <li>Auf Cancel Button hide Edit Form / show Add Form</li>
+                    <li>Bei allen Änderungen im UI die Person Table neu laden</li>
+                </ul>
+            </p>
+            <p>
+                Auflagen sind:
+                <ul>
+                    <li>Die Kommunikation mit dem REST Service läuft über JSON</li>
+                    <li>Wir verwenden jQuery als JavaScript Library</li>
+                    <li>Wir bauen als erstes den REST Service</li>
+                    <li>Wir bauen als zweites die Client Logik</li>
+                    <li>Wir betreiben nach erfolgreicher Implementation Refactoring</li>
+                    <li>Wir betreiben nach erfolgreicher Implementation minimales Styling mit Bootstrap</li>
+                </ul>
+            </p>
+
+            <p>
+                Hilfreiche Links und Tools:
+                <ul>
+                    <li>Google Chrome</li>
+                    <li>Postman Plugin für Chrome</li>
+                    <li>Bootstrap Dokumentation</li>
+                    <li>jQuery Dokumntation</li>
+                    <li>asp.net MVC 6 Dokumentation</li>
+                </ul>
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>
